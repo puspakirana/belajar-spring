@@ -1,4 +1,4 @@
-package com.example.belajar_spring;
+package com.example.belajar_spring.model;
 
 public class Database {
     private static Database database;
