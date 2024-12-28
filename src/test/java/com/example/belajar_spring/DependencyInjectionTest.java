@@ -32,10 +32,12 @@ public class DependencyInjectionTest {
     @Test
     void testDependencyInjection() {
         Foo foo = applicationContext.getBean(Foo.class);
+        Foo foo2 = applicationContext.getBean("fooSecond",Foo.class);
         Bar bar = applicationContext.getBean(Bar.class);
         FooBar fooBar = applicationContext.getBean(FooBar.class);
 
-        Assertions.assertSame(foo, fooBar.getFoo());
+        Assertions.assertNotSame(foo, fooBar.getFoo());
+        Assertions.assertSame(foo2, fooBar.getFoo());
         Assertions.assertSame(bar, fooBar.getBar());
     }
 }
