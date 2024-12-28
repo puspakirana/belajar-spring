@@ -3,17 +3,20 @@ package com.example.belajar_spring;
 import com.example.belajar_spring.data.Foo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
-public class DuplicateConfiguration {
+public class BeanNameConfiguration {
 
-    @Bean
+    @Primary
+    @Bean(name = "fooFirst")
     public Foo foo1() {
         return new Foo();
     }
 
-    @Bean
+    @Bean(name= "fooSecond")
     public Foo foo2() {
         return new Foo();
     }
+
 }

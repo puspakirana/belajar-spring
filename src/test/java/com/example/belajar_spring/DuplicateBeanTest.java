@@ -1,5 +1,6 @@
 package com.example.belajar_spring;
 
+import com.example.belajar_spring.data.Foo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
