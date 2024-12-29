@@ -1,4 +1,4 @@
-package com.example.belajar_spring;
+package com.example.belajar_spring.configuration;
 
 import com.example.belajar_spring.model.Foo;
 import org.springframework.context.annotation.Bean;
