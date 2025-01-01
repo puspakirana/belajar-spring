@@ -1,5 +1,6 @@
 package com.example.belajar_spring;
 
+import com.example.belajar_spring.model.MultiFoos;
 import com.example.belajar_spring.repository.CategoryRepository;
 import com.example.belajar_spring.repository.CustomerRepository;
 import com.example.belajar_spring.repository.ProductRepository;
@@ -61,5 +62,11 @@ public class ComponentTest {
 
         Assertions.assertSame(normalcustomerRepository, customerService.getNormalCustomerRepository());
         Assertions.assertSame(premiumCustomerRepository, customerService.getPremiumCustomerRepository());
+    }
+
+    @Test
+    void testObjectProvider() {
+        MultiFoos multiFoos = applicationContext.getBean(MultiFoos.class);
+        Assertions.assertEquals(3, multiFoos.getFoos().size());
     }
 }
