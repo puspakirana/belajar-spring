@@ -50,6 +50,16 @@ public class ComponentTest {
         CustomerService customerService = applicationContext.getBean(CustomerService.class);
         CustomerRepository customerRepository = applicationContext.getBean(CustomerRepository.class);
 
-        Assertions.assertSame(customerRepository, customerService.getCustomerRepository());
+        Assertions.assertSame(customerRepository, customerService.getNormalCustomerRepository());
+    }
+
+    @Test
+    void testFieldDependencyInjectionWithQualifier() {
+        CustomerService customerService = applicationContext.getBean(CustomerService.class);
+        CustomerRepository normalcustomerRepository = applicationContext.getBean(CustomerRepository.class);
+        CustomerRepository premiumCustomerRepository = applicationContext.getBean("premiumCustomerRepository",CustomerRepository.class);
+
+        Assertions.assertSame(normalcustomerRepository, customerService.getNormalCustomerRepository());
+        Assertions.assertSame(premiumCustomerRepository, customerService.getPremiumCustomerRepository());
     }
 }
