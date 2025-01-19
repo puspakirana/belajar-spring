@@ -1,6 +1,7 @@
 package com.example.belajar_spring;
 
 import com.example.belajar_spring.listener.LoginSuccessListener;
+import com.example.belajar_spring.listener.UserListener;
 import com.example.belajar_spring.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,8 @@ public class EventListenerTest {
     @Configuration
     @Import({
             UserService.class,
-            LoginSuccessListener.class
+            LoginSuccessListener.class,
+            UserListener.class
     })
     public static class TestConfiguration {}
 
