@@ -1,6 +1,5 @@
-package com.example.belajar_spring;
+package com.example.belajar_spring.application;
 
-import com.example.belajar_spring.application.FooApplication;
 import com.example.belajar_spring.model.Foo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

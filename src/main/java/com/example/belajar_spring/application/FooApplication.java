@@ -1,5 +1,6 @@
 package com.example.belajar_spring.application;
 
+import com.example.belajar_spring.model.Bar;
 import com.example.belajar_spring.model.Foo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,7 +17,7 @@ public class FooApplication {
     }
 
     @Bean
-    public Foo foo() {
+    public Foo foo(Bar bar) {
         return new Foo();
     }
 
