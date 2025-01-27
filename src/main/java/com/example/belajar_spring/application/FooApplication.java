@@ -17,7 +17,7 @@ public class FooApplication {
     }
 
     @Bean
-    public Foo foo(Bar bar) {
+    public Foo foo() {
         return new Foo();
     }
 
